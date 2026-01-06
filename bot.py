@@ -55,7 +55,7 @@ def ask_to_subscribe(chat_id):
 def start(message):
     user_id = message.from_user.id
     if check_user(user_id):
-        bot.send_message(message.chat.id, "botdan foydalanishingiz mumkin!")
+        bot.send_message(message.chat.id, "botdan foydalanishingiz mumkin! lekin togri manoda foydalaning")
     else:
         # agar obuna bolmagan bolsa
         ask_to_subscribe(message.chat.id)
@@ -101,4 +101,5 @@ def run_bot():
 
 if __name__ == "__main__":
     threading.Thread(target=run_bot).start()
+
     app.run(host="0.0.0.0", port=5000, debug=False)   
